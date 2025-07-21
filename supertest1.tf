@@ -60,12 +60,10 @@ resource "google_organization_iam_member" "iam_recommender_admin" {
   member = "user:pkhushalani@google.com"
 }
 
-resource "google_organization_iam_binding" "organization_administrator" {
+resource "google_organization_iam_member" "organization_administrator" {
   org_id = "274706244275"
   role   = "roles/resourcemanager.organizationAdmin"
-  members = [
-    "user:pkhushalani@google.com",
-  ]
+  member = "user:pkhushalani@google.com"
 }
 
 resource "google_organization_iam_member" "organization_role_administrator" {
