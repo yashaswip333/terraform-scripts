@@ -98,6 +98,12 @@ resource "google_organization_iam_member" "security_center_admin" {
   member = "user:pkhushalani@google.com"
 }
 
+resource "google_organization_iam_member" "security_center_admin" {
+  org_id = "274706244275"
+  role   = "roles/securitycenter.admin"
+  member = "user:aditv@google.com"
+}
+
 resource "google_organization_iam_member" "iam_security_admin" {
   org_id = "274706244275"
   role   = "roles/iam.securityAdmin"
