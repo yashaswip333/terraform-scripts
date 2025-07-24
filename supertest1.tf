@@ -7,15 +7,6 @@ resource "google_organization_iam_binding" "chronicle_api_admin" {
   ]
 }
 
-resource "google_organization_iam_binding" "latchkey_hierarchy_traversal" {
-  org_id = "274706244275"
-  role   = "organizations/274706244275/roles/latchkey_hierarchy_traversal" 
-  members = [
-    "user:foo@example.com"
-  ]
-}
-
-
 resource "google_organization_iam_member" "chronicle_service_admin" {
   org_id = "274706244275"
   role   = "roles/chroniclesm.admin" 
